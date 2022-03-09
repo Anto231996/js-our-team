@@ -31,33 +31,21 @@ const team = [
     },
 ];
 
+let itemsTeam = "";
 
-for (let key in team){
-    console.log (team [key]);
-    console.log (team [key].name);
-    console.log (team [key].role);
-    console.log (team [key].image);
-}
-
-let itemTeam = "";
-
-for (let key in team){
     for (let i = 0; i < team.length; i++){
-        itemTeam += 
+        itemsTeam += 
         `
-        <div class="items col col-md-6 col-lg-4 mb-4 text-center">
-            <img src="${team[key].image}" alt="random picture">
-            <div class="description">
-                <h3>${team[key].name}</h3>
-                <h6>${team[key].role}</h6>
+        <div class="items col col-md-6 col-lg-4 mb-4">
+            <img src="img/${team[i].image}" alt="random picture">
+            <div class="item-description text-center">
+                <h3>${team[i].name}</h3>
+                <h6>${team[i].role}</h6>
             </div>
-        </div>;
+        </div>
         `
-    }
 }
 
 const itemsElement = document.querySelector(".row");
 
-itemsElement.innerHTML = itemTeam;
-    
-console.log(team.length)
+itemsElement.innerHTML = itemsTeam;
