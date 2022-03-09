@@ -1,0 +1,13 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: beige;
+}
+
+img{
+    width: 100%;
+}
+
+div.description{
+    background-color: white;
+    padding: 15px;
+}
